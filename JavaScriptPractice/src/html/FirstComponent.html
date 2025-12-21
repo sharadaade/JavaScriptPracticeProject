@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Component</title>
+    <script>
+            var Title = prompt("Enter title");
+            var type = prompt("Enter element type", "text | password");
+            var btnText = prompt("Enter button Textx");
+
+            function myFun() {
+                alert(`You are selected ${type}`);
+            }
+
+            var component = `
+                <h2>${Title}</h2>
+                <div>
+                    <input type=${type}> <button onclick=${myFun()}>${ btnText }</button>
+                </div >
+                `;
+
+            document.write(component);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function checkComment() {
+            let txtContent = document.getElementById('txtComment').value;
+            let count = document.getElementById('count');
+
+            let MaxLen = 100;
+            count.innerHTML = `${MaxLen - txtContent.length} char left`;
+        }
+    </script>
+</head>
+<body>
+      <p>Comment</p>
+      <textarea id="txtComment" maxlength="100" rows="5" cols="20" onkeyup="checkComment()"></textarea>
+      <p id="count"></p>
+</body>
+</html>

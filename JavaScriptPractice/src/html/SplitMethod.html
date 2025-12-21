@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--<script>
+        let contact = "david-9977997766, sam-3344226655";
+        let result = contact.split(',');
+        let [david, sam] = result;
+        document.write(david + '<br>');
+        document.write(sam + '<br>');
+        document.write(david.split('-')[0] + '<br>');
+        document.write(david.split('-')[1] + '<br>');
+    </script>-->
+
+    <script>
+        function convertSentance(msg) {
+            let first = msg.charAt(0);
+            let rest = msg.slice(1);
+
+            let result = first.toUpperCase() + rest.toLowerCase();
+            document.write(result);
+        }
+        convertSentance('javascript');
+    </script>
+</body>
+</html>

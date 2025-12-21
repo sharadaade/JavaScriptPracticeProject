@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3>LogIn</h3>
+    <input type="text" placeholder="Enter Name" />
+    <br />
+    <input type="password" placeholder="Your password" />
+    <br />
+    <p>Capcha</p>
+    <p id="cap-display"></p>
+    <br />
+    <input type="text" id="entered-capcha" />
+    <input type="button" value="Submit" onclick="CheckCapcha()" />
+
+    <script>
+
+    let RandomNum = Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString() + Math.floor(Math.random() * 10).toString();
+    document.getElementById('cap-display').innerHTML = RandomNum;
+    RandomNum = RandomNum.trim();
+
+    function CheckCapcha() {
+        let enteredCapcha = document.getElementById('entered-capcha').value;
+        enteredCapcha = enteredCapcha.trim();
+        if (RandomNum == enteredCapcha) {
+            alert('Capcha Matched');
+        } else {
+            alert('Capcha Wrong');
+        }
+    }
+    </script>
+</body>
+</html>
