@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        let ar = ["Mango", "Tomato", "Chiku", "Banana", "Lemon"];
+        ar.push("Apple");
+        ar.push("NOT");
+        ar.pop();
+        //for (let i = 0; i < ar.length; i++) {
+        //    document.write(ar[i] + "<br>");
+        //}
+        let nums = [10, 20, 30, 40, 50, 60];
+
+        let result = nums.find(n => n > 30)
+        document.write(result);
+
+        document.write('<br>');
+        let r = nums.filter(n => n > 30)
+        document.write(r);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

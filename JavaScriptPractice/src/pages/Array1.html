@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        //Both[] and new Array() create dynamic arrays
+        //JavaScript arrays are not static
+        //JavaScript does not guarantee continuous memory like C / C++
+        //JS arrays are objects internally(hash - based)
+
+        // [] => Array literal (preferred & faster)
+        // Array() => Array constructor (less commonly used)
+
+        let val = new Array();
+        val[0] = 10;
+        val[1] = 20;
+        val[2] = 30;
+        val[3] = "A";
+        val[4] = "B";
+        val[5] = true;
+
+        // for..in gives index not actual value
+        //for (var prop in val) {
+        //    document.write(`${prop} `);
+        //}
+
+        //document.write('<br/>');
+
+        //for (let value of val) {
+        //    document.write(`${value} `);
+        //}
+
+        //let a = [10, ['Sharad Aade', 23], 33];
+        //document.write(a[1][0] + '<br>')
+        //document.write(a[1][1])
+
+
+
+        let ar = [10, 40, 50, 60, 70, 80, 20, 30];
+
+        //document.write(ar["0"])
+
+        // Return first value which is matching condition
+        let newFind = ar.find((x) => x > 40)
+        //document.write(`${newFind} `); // 50
+
+        // Return all value which is matching condition
+        document.write(`<br/>`);
+        let newFilte = ar.filter((x) => x > 40)
+        //document.write(newFilte)  // 50, 60, 70, 80
+
+    </script>
+</body>
+</html>

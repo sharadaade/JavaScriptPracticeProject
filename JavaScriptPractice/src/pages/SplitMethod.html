@@ -15,7 +15,7 @@
         document.write(david.split('-')[1] + '<br>');
     </script>-->
 
-    <script>
+    <!--<script>
         function convertSentance(msg) {
             let first = msg.charAt(0);
             let rest = msg.slice(1);
@@ -24,6 +24,13 @@
             document.write(result);
         }
         convertSentance('javascript');
+    </script>-->
+
+    <script>
+        let sen = 'Welcome to JS. You can complete JS';
+        document.write(sen.replace('JS', 'JavaScript'));
+        document.write('<br/>');
+        document.write(sen.replaceAll('JS', 'JavaScript'));
     </script>
 </body>
 </html>

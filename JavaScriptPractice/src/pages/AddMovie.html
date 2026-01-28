@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var movies = ["VENOM", "Devara"];
+        function LoadMovies() {
+            document.getElementById("lstMovie").innerHTML = "";
+            movies.map(function (movie) {
+                var option = document.createElement("option");
+                option.text = movie;
+                option.value = movie;
+                document.getElementById("lstMovies").appendChild(option);
+            })
+        }
+    </script>
+</head>
+<body onload="LoadMovies()">
+    <div>
+        <label>Add New Movie</label>
+        <div>
+            <input type="text" id="txtMovies"/>
+            <button>Add Movie</button>
+        </div>
+        <div>
+            <label id="lblCount"></label>
+            <div>
+                <div>
+                    <button>Sort Ascending</button>
+                    <button>Sort Descending</button>
+                </div>
+                <select id="lstMovies"></select>
+                <div>
+                    <button>Delete Movie</button>
+                    <button>Clear all</button>
+                    <button>Edit Movie</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

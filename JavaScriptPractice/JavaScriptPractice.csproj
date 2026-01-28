@@ -69,15 +69,23 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="src\html\Capcha.html" />
-    <Content Include="src\html\CommentCharCount.html" />
-    <Content Include="src\html\SplitMethod.html" />
-    <Content Include="src\html\Validation.html" />
-    <Content Include="src\html\DataTypes.html" />
-    <Content Include="src\html\First.html" />
-    <Content Include="src\html\FirstComponent.html" />
-    <Content Include="src\html\IncrementDecrement.html" />
-    <Content Include="src\html\StringDemo.html" />
+    <Content Include="src\img\NexLevelPrep.png" />
+    <Content Include="src\pages\AddMovie.html" />
+    <Content Include="src\pages\Array1.html" />
+    <Content Include="src\pages\Capcha.html" />
+    <Content Include="src\pages\CommentCharCount.html" />
+    <Content Include="src\pages\dynamicallyArray.html" />
+    <Content Include="src\pages\NewImageElementCreate.html" />
+    <Content Include="src\pages\PushAndPop.html" />
+    <Content Include="src\pages\SliceAndSplice.html" />
+    <Content Include="src\pages\SplitMethod.html" />
+    <Content Include="src\pages\SpreadOperator.html" />
+    <Content Include="src\pages\Validation.html" />
+    <Content Include="src\pages\DataTypes.html" />
+    <Content Include="src\pages\First.html" />
+    <Content Include="src\pages\FirstComponent.html" />
+    <Content Include="src\pages\IncrementDecrement.html" />
+    <Content Include="src\pages\StringDemo.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,10 +103,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\css\" />
-    <Folder Include="src\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
