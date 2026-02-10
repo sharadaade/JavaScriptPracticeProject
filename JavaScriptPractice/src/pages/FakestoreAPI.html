@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fakestore</title>
+
+    <link href="../../Content/bootstrap.rtl.min.css" rel="stylesheet" />
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script>
+        function CategoriesLoad() {
+            fetch('https://fakestoreapi.com/Products/categories')
+                .then(function (response) {
+                    console.log("Response received:", response);
+                    return response.json();
+                })
+                .then(function (categories) {
+                    // Manuall added first element in array
+                    categories.unshift("All");
+                    categories.map(function (category) {
+                        var option = document.createElement("option");
+                        option.text = category.toUpperCase();
+                        option.value = category;
+                        document.getElementById("lstCategory").appendChild(option);
+                    })
+                })
+            
+        }
+        function ProductsLoad() {
+            fetch("https://fakestoreapi.com/Products")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (products) {
+                    products.map(function (product) {
+                        let div = document.createElement("div");
+                        div.className = "card m-2 p-2";
+                        div.style.width = "200px";
+                        div.innerHTML = `
+                                <img class="card-image-top" src=${product.image} height="140">
+                                <div class="card-header">
+                                    ${product.title}
+                                </div>
+                                <div class="card-body">
+                                    <dl>
+                                        <dt>Price</dt>
+                                        <dd>${product.price}</dd>
+                                        <dt>Rating</dt>
+                                        <dd>${product.rating.rate}<span class="bi bi-star-fill"><span/></dd>
+                                    </dl>
+                                </div>
+                                <div class="card-footer"> 
+                                    <button class="bi bi-cart2 btn btn-warning">Add to Cart</button>
+                                </div>
+                        `;
+                        document.querySelector("main").appendChild(div);
+
+                    })
+                })
+        }
+        function bodyload(){
+            CategoriesLoad();
+            ProductsLoad();
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <header>
+        <div>Fakestore</div>
+        <div class="py-2">
+            <span class="mx-3">Home</span>
+            <span>Electronics</span>
+            <span class="mx-3">Jwellery</span>
+            <span>Men's Fashion</span>
+            <span class="mx-3">Women's Fashion</span>
+        </div>
+        <div>
+            <button>0</button>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div>
+                <label>Select Category</label>
+                <div>
+                    <select id="lstCategory"></select>
+                </div>
+            </div>
+        </nav>
+        <main class="col-10 d-flex flex-wrap overflow-auto" style="height:500px">
+
+        </main>
+    </section>
+</body>
+</html>

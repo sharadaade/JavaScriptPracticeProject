@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function bodyload() {
+            
+            fetch("./data/product.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (products) {
+                    products.map(function (product) {
+                        var div = document.createElement("div");
+                        div.className = "card m-2 p-2";
+                        div.style.width = "200px";
+                        div.innerHTML = `
+                            <img class="card-img-top" src=${product.image} height="250">
+                            <div class="card-header">
+                                ${product.title}
+                            </div>
+                        `;
+                        document.querySelector("main").appendChild(div);
+                    })
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                .finally(function () {
+                    console.log("Fetch ends");
+                })
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+
+</body>
+</html>

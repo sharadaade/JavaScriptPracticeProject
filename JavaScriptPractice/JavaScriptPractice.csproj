@@ -97,9 +97,12 @@
     <Content Include="src\pages\Capcha.html" />
     <Content Include="src\pages\CommentCharCount.html" />
     <Content Include="src\pages\dynamicallyArray.html" />
+    <Content Include="src\pages\FakestoreAPI.html" />
     <Content Include="src\pages\JSON.html" />
+    <Content Include="src\pages\Nasa-API.html" />
     <Content Include="src\pages\NewImageElementCreate.html" />
     <Content Include="src\pages\Object.html" />
+    <Content Include="src\pages\Promises.html" />
     <Content Include="src\pages\PushAndPop.html" />
     <Content Include="src\pages\SampleOne.html" />
     <Content Include="src\pages\SliceAndSplice.html" />
